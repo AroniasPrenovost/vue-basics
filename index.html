@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Seattle Digital</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+</head>
+<!-- || Vue.js basics || --> 
+
+<!-- event handling --> 
+<div id="vue-instance">
+  Your name here: <input type="text" v-model="name">
+  <button v-on:click="sayHello">Send Message</button>
+  <hr>
+  <br>
+  
+<!-- two way data binding --> 
+  Enter a greeting: <input type="text" v-model="greeting">
+  <pre>{{ $data | json }}</pre>
+
+<!-- list rendering --> 
+ <ul>
+    <li v-for="item in inventory">
+      {{ item.name }} - ${{ item.price }}
+    </li>
+  </ul>
+  
+ <!-- listing list elements + index --> 
+   <ul>
+    <li v-for="(index, item) in inventory">
+      {{ index }} - {{ item.name }} - ${{ item.price }}
+    </li>
+  </ul>
+<!-- adding a function / computing --> 
+<input type="number" v-model="x"> result: {{ doubleX }}
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.16/vue.js'></script>
+<script type='text/javascript' scr='index.js'></script>
+</body>
+</html>
